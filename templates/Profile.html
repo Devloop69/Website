@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='nav.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='profile.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/d2cbbd524e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style></style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/profile"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="http://127.0.0.1:8000/calc">Calculator</a></li>
+            <li><a href="http://127.0.0.1:8000/todo">Todo list</a></li>
+        </ul>
+    </nav>
+    {% for message in get_flashed_messages() %}
+    <p class="greet">{{message}}</p>
+    {% endfor %}
+    <div class="box">
+        <h1 class="head">Welcome to a website about <i class="fa-solid fa-laptop marg"></i> Tools! <i
+                class="fa-solid fa-computer marg"></i></h1>
+    </div>
+    <div class="calc">
+        <table>
+            <td>
+                <h2 class="h"><i class="fa-solid fa-calculator"></i> Calculator</h2>
+                <p class="calcp">
+                    The calculator is uniquely designed to make convineince(Not all I write is true).
+                    I made it with the help of a tutorial. By the way you can call me Devaripsyo.
+                    It has functions like add,subtract,square,divide,etc.
+                    You can visit it from the navbar at the top.
+                    This is a calculator made in Javascript. 
+                    It uses CSS and HTML as its framework like frontend.
+                </p>
+            </td>
+            <td>
+                <img src="{{url_for('static',filename='Screenshot_14-4-2024_162922_127.0.0.1.jpeg')}}" class="calcu">
+            </td>
+        </table>
+    </div>
+    <div class="to">
+        <h2><i class="fa-solid fa-list-check"></i> To Do List</h2>
+        <p>This is a todo list for all your tasks that you want to accomplish.
+            It is a good design and I am proud of it.
+            I don`t think I should say that and let you all review it but I like it.
+            It has three lanes - Todo, Doing and Done to let you keep track of tasks
+            that you`ve left to do, doing, or done.
+            As for all of these, this is also made in HTML,CSS and Javascript.
+            Javascript is the backend and HTML and CSS is the frontend.
+            Hope you enjoy all of these things!
+        </p>
+        <img src="{{url_for('static',filename='Screenshot_14-4-2024_165245_127.0.0.1.jpeg')}}" class="tol">
+    </div>
+    <div class="about">
+        <h2><i class="fa-solid fa-address-card"></i> About</h2>
+        <p>
+            This website is all about the tools that I made and what uses they derive.
+            This website will give you features that almost all websites would not give you!
+            There is a todo list, a claculator and much more to explore!
+            So, be ready to be amazed at what a 13 year old can do!
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aqua;
+        }
+        .box{
+            background-color: brown;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: move;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move {
+            from{
+                width:250px;
+                transform: translateX(-300px);
+            }
+            to{
+                width: 400px;
+                transform: translateX(0px);
+            }
+        }
+        @keyframes text {
+            from{
+                transform: translateX(-300px);
+            }
+            to{
+                transform: translateX(0);
+            }
+        }
+        .hell{
+            position: relative;
+            animation: text 1s infinite;
+            border-color: aqua;
+            border-style: dashed;
+            font-family: fantasy;
+            font-size: 100px;
+            color:blue;
+            text-shadow: 2px 3px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+    <h1 class="hell">Hello</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='todo.css')}}">
+    <script src="https://kit.fontawesome.com/d2cbbd524e.js" crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='drag.js')}}" defer></script>
+    <script src="{{url_for('static',filename='todo.js')}}" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/profile"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="http://127.0.0.1:8000/calc">Calculator</a></li>
+            <li><a href="http://127.0.0.1:8000/todo">Todo list</a></li>
+        </ul>
+    </nav>
+    <div class="board">
+        <form id="todo-form">
+            <input type="text" placeholder="New task.." id="todo-input">
+            <button type="submit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <div class="lanes">
+            <div class="swim-lane" id="todo-lane">
+                <h3 class="heading pacifico-regular"><i class="fa-solid fa-list-check"></i> ToDo</h3>
+            </div>
+            <div class="swim-lane">
+                <h3 class="heading pacifico-regular"><i class="fa-solid fa-spinner"></i> Doing</h3>
+            </div>
+            <div class="swim-lane">
+                <h3 class="heading pacifico-regular"><i class="fa-solid fa-check"></i> Done</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

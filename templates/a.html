@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Aniamtion</title>
+    <script src="https://kit.fontawesome.com/d2cbbd524e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='Prof.css')}}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="http://127.0.0.1:8000/profile"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="http://127.0.0.1:8000/calc">Calculator</a></li>
+            <li><a href="http://127.0.0.1:8000/todo">Todo list</a></li>
+        </ul>
+    </nav>
+    {% for message in get_flashed_messages() %}
+    <div class="box">
+        <h1 class="head">{{message}}</h1>
+    </div>
+    {% endfor %}
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()" class="operator-btn">C</button>
+            <button onclick="clearWord()" class="operator-btn"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="appendToDisplay('**')" class="operator-btn">^</button>
+            <button onclick="appendToDisplay('**2')" class="operator-btn">²</button>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.box{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 750px;
+    height: 100%;
+    background: linear-gradient(#00ccff,#d500f9);
+    animation: rotate 5s linear infinite;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    background: rgb(32, 32, 106);
+    inset: 5px;
+    border-radius: 20px;
+}
+.head{
+    color: white;
+    font-size: 100px;
+    z-index: 2;
+}
+body{
+    background-color: rgb(15, 15, 32);
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

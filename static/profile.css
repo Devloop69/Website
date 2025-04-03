@@ -1,0 +1,97 @@
+
+div{
+    border-radius: 20px;
+    margin-top: 50px;
+}
+body{
+    background-color: brown;
+}
+p{
+    color: #DFE0D4;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}
+h2{
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    color: #85CFCB;
+}
+.about{
+    background-color: #4E3188;
+}
+.greet{
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 20%;
+    background: linear-gradient(#00ccff,#d500f9);
+    animation: rotate 5s linear infinite;
+}
+.box::after{
+    border-radius: 20px;
+    content: '';
+    position: absolute;
+    background: #018790;
+    backdrop-filter: blur(20px);
+    inset: 5px;
+}
+.head{
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    z-index: 2;
+}
+body{
+    background-color: rgb(15, 15, 32);
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.calc{
+    background-color: #FAB95B;
+}
+.h{
+    color: #393E46;
+}
+.calcu{
+    border-radius: 20px;
+}
+.calcp{
+    color: #212121;
+}
+.to{
+    background-color: #01252A;
+}
+.tol{
+    margin-left: 320px;
+    margin-top: 50px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='Style.css')}}">
+    <script src="https://kit.fontawesome.com/d2cbbd524e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="animate">Calculator</h1>
+        <form action="profile" method="post">
+            {% for message in get_flashed_messages() %}
+            <h1>{{message}}</h1>
+            {% endfor %}
+            <div class="inp">
+                <input type="text" name="Username" placeholder="Username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <br>
+            <button type="submit" value="Submit" id="profile" class="pacifico-regular">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

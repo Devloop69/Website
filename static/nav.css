@@ -1,0 +1,27 @@
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(28, 30, 30);
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(20, 19, 19);
+}
+.navbar li{
+    float: left;
+}
+.navbar i{
+    color: white;
+}
+.house{
+    color: white;
+}
